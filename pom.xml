@@ -25,11 +25,16 @@
 			<artifactId>jogl-all-main</artifactId>
 			<version>2.3.2</version>
 		</dependency>
-		
-		<dependency>
+
+		<!-- 		<dependency>
 			<groupId>com.miglayout</groupId>
 			<artifactId>miglayout</artifactId>
 			<version>3.7.4</version>
+		</dependency>-->
+		<dependency>
+			<groupId>com.miglayout</groupId>
+			<artifactId>miglayout-swing</artifactId>
+			<version>5.1-SNAPSHOT</version>
 		</dependency>
 
 
@@ -40,4 +45,35 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<!-- <testSourceDirectory>src/tests</testSourceDirectory> -->
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.0</version><!--$NO-MVN-MAN-VER$ -->
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		</plugins>
+
+
+		<!-- using it to have m2e being able to run add-source -->
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.0</version><!--$NO-MVN-MAN-VER$ -->
+					<configuration>
+						<source>1.6</source>
+						<target>1.6</target>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
 </project>
